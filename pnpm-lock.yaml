@@ -110,8 +110,8 @@ dependencies:
     specifier: ^8.0.7
     version: 8.0.7(@types/react@18.2.33)(react@18.2.0)
   react-reader:
-    specifier: ^2.0.1
-    version: 2.0.1(react@18.2.0)
+    specifier: ^2.0.4
+    version: 2.0.4(react@18.2.0)
   react-syntax-highlighter:
     specifier: ^15.5.0
     version: 15.5.0(react@18.2.0)
@@ -1710,7 +1710,7 @@ packages:
     dependencies:
       '@types/localforage': 0.0.34
       '@xmldom/xmldom': 0.7.9
-      core-js: 3.27.2
+      core-js: 3.33.0
       event-emitter: 0.3.5
       jszip: 3.10.1
       localforage: 1.10.0
@@ -4678,8 +4678,8 @@ packages:
       - supports-color
     dev: false
 
-  /react-reader@2.0.1(react@18.2.0):
-    resolution: {integrity: sha512-QRprddJspCTajXZyicSc4tesvOXpA/FiNmEvI336Id1cI7mieaSv12V2F2Z55TdsdYrkbx5yYpHOppCxixJ6KQ==}
+  /react-reader@2.0.4(react@18.2.0):
+    resolution: {integrity: sha512-BqeKW/eMWqZSJfOWiCMpc0hh8aljXhsGZAY95ILqCzGg22CKRT5qJPmmxh0xOkj8THgQwbuAxgyqQBEC1ms9dw==}
     dependencies:
       epubjs: 0.3.93
       react-swipeable: 7.0.1(react@18.2.0)
