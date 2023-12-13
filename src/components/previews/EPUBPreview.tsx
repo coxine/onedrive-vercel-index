@@ -55,15 +55,15 @@ const EPUBPreview: FC<{ file: OdFileObject }> = ({ file }) => {
               height: '70vh',
             }}
           >
-            <ReactReader
-              url={`/api/raw/?path=${asPath}${hashedToken ? '&odpt=' + hashedToken : ''}`}
-              getRendition={rendition => fixEpub(rendition)}
-              loadingView={<Loading loadingText={t('Loading EPUB ...')} />}
-              location={location}
-              locationChanged={onLocationChange}
-              epubInitOptions={{ openAs: 'epub' }}
-              epubOptions={{ flow: 'scrolled', allowPopups: true }}
-            />
+          <ReactReader url={ `/api/raw/?path=${asPath}${hashedToken ? '&odpt=' + hashedToken : '' }` } getRendition={ rendition=>
+            fixEpub(rendition) }
+            loadingView = {
+            < Loading loadingText={ t('Loading EPUB ...') } />}
+            location = { location ?? ''} // 如果location为空，就用空字符串替换
+            locationChanged = { onLocationChange }
+            epubInitOptions = {{ openAs: 'epub' }}
+            epubOptions = {{ flow: 'scrolled', allowPopups: true }}
+          />
           </div>
         </div>
       </div>
