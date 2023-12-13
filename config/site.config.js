@@ -38,14 +38,14 @@ module.exports = {
   // [OPTIONAL] The footer component of your website. You can write HTML here, but you need to escape double
   // quotes - changing " to \". You can write anything here, and if you like badges, generate some with https://shields.io
   footer:
-    'Powered by <a href="https://github.com/spencerwooo/onedrive-vercel-index" target="_blank" rel="noopener noreferrer">onedrive-vercel-index</a>. <br />考神保佑，走向辉煌！---<b>瑞治下载站</b>---<a href="https://icp.gov.moe/?keyword=20223015">萌ICP备20223015号</a>',
+    'Powered by <a href="https://github.com/Vinfall/onedrive-vercel-index" target="_blank" rel="noopener noreferrer">onedrive-vercel-index</a>.<br /><a href="https://github.com/spencerwooo/onedrive-vercel-index" target="_blank" rel="noopener noreferrer">Archived Version</a><br />考神保佑，走向辉煌！---<b>瑞治下载站</b>---<a href="https://icp.gov.moe/?keyword=20223015">萌ICP备20223015号</a>',
 
   // [OPTIONAL] This is where you specify the folders that are password protected. It is an array of paths pointing to all
   // the directories in which you have .password set. Check the documentation for details.
   protectedRoutes: [
     "/💻应用/越过长城",
     "/📄文档/学习资源/软工",
-    
+
   ],
 
   // [OPTIONAL] Use "" here if you want to remove this email address from the nav bar.
