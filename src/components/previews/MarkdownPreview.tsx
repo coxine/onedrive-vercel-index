@@ -116,11 +116,11 @@ const MarkdownPreview: FC<{
           {/* Using rehypeRaw to render HTML inside Markdown is potentially dangerous, use under safe environments. (#18) */}
           <ReactMarkdown
             // @ts-ignore
-            remarkPlugins={[remarkGfm, remarkMath]}
+            // remarkPlugins={[remarkGfm, remarkMath]}
             // temporarily remove remarkGfm becuase of its incompatibility with inline code in markdown
             // See: https://github.com/remarkjs/remark-gfm/issues/57
             //      https://github.com/remarkjs/react-markdown/issues/763
-            // remarkPlugins={[remarkMath]}
+            remarkPlugins={[remarkMath]}
             // The type error is introduced by caniuse-lite upgrade.
             // Since type errors occur often in remark toolchain and the use is so common,
             // ignoring it shoudld be safe enough.
