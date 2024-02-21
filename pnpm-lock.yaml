@@ -4832,7 +4832,7 @@ packages:
       '@types/mdast': 4.0.0
       mdast-util-math: 3.0.0
       micromark-extension-math: 3.0.0
-      unified: 11.0.3
+      unified: 10.1.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4853,7 +4853,7 @@ packages:
       '@types/mdast': 4.0.0
       mdast-util-from-markdown: 2.0.0
       micromark-util-types: 2.0.0
-      unified: 11.0.3
+      unified: 10.1.2
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4872,7 +4872,7 @@ packages:
     dependencies:
       '@types/mdast': 4.0.0
       mdast-util-to-markdown: 2.1.0
-      unified: 11.0.3
+      unified: 10.1.2
     dev: false
 
   /remove-trailing-separator@1.1.0:
