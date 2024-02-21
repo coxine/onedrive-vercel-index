@@ -4821,7 +4821,7 @@ packages:
       micromark-extension-gfm: 3.0.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      unified: 11.0.3
+      unified: 10.1.2
     transitivePeerDependencies:
       - supports-color
     dev: false
