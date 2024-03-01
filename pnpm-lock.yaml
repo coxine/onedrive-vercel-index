@@ -142,8 +142,8 @@ dependencies:
 
 devDependencies:
   '@types/cors':
-    specifier: ^2.8.15
-    version: 2.8.15
+    specifier: ^2.8.17
+    version: 2.8.17
   '@types/crypto-js':
     specifier: ^4.2.2
     version: 4.2.2
@@ -723,8 +723,8 @@ packages:
     resolution: {integrity: sha512-COUnqfB2+ckwXXSFInsFdOAWQzCCx+a5hq2ruyj+Vjund94RJQd4LG2u9hnvJrTgunKAaax7ancBYlDrNYxA0g==}
     dev: false
 
-  /@types/cors@2.8.15:
-    resolution: {integrity: sha512-n91JxbNLD8eQIuXDIChAN1tCKNWCEgpceU9b7ZMbFA+P+Q4yIeh80jizFLEvolRPc1ES0VdwFlGv+kJTSirogw==}
+  /@types/cors@2.8.17:
+    resolution: {integrity: sha512-8CGDvrBj1zgo2qE+oS3pOCyYNqCPryMWY2bGfwA0dcfopWGgxs+78df0Rs3rc9THP4JkOhLsAa+15VdpAqkcUA==}
     dependencies:
       '@types/node': 20.8.10
     dev: true
@@ -4821,7 +4821,7 @@ packages:
       micromark-extension-gfm: 3.0.0
       remark-parse: 11.0.0
       remark-stringify: 11.0.0
-      unified: 10.1.2
+      unified: 11.0.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4832,7 +4832,7 @@ packages:
       '@types/mdast': 4.0.0
       mdast-util-math: 3.0.0
       micromark-extension-math: 3.0.0
-      unified: 10.1.2
+      unified: 11.0.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4853,7 +4853,7 @@ packages:
       '@types/mdast': 4.0.0
       mdast-util-from-markdown: 2.0.0
       micromark-util-types: 2.0.0
-      unified: 10.1.2
+      unified: 11.0.3
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -4872,7 +4872,7 @@ packages:
     dependencies:
       '@types/mdast': 4.0.0
       mdast-util-to-markdown: 2.1.0
-      unified: 10.1.2
+      unified: 11.0.3
     dev: false
 
   /remove-trailing-separator@1.1.0:
