@@ -1,5 +1,5 @@
 import { FC, CSSProperties, ReactNode } from 'react'
-import ReactMarkdown from 'react-markdown'
+import ReactMarkdown, { Components } from 'react-markdown'
 import remarkGfm from 'remark-gfm'
 import remarkMath from 'remark-math'
 import rehypeKatex from 'rehype-katex'
@@ -24,13 +24,17 @@ const MarkdownPreview: FC<{
   // The parent folder of the markdown file, which is also the relative image folder
   const parentPath = standalone ? path.substring(0, path.lastIndexOf('/')) : path
 
-  const { response: content, error, validating } = useFileContent(`/api/raw/?path=${parentPath}/${file.name}`, path)
+  const { response: content, error, validating } = useFileContent(
+    `/api/raw/?path=${parentPath}/${file.name}`,
+    path
+  )
   const { t } = useTranslation()
 
   // Check if the image is relative path instead of a absolute url
-  const isUrlAbsolute = (url: string | string[]) => url.indexOf('://') > 0 || url.indexOf('//') === 0
+  const isUrlAbsolute = (url: string | string[]) =>
+    url.indexOf('://') > 0 || url.indexOf('//') === 0
   // Custom renderer:
-  const customRenderer = {
+  const customRenderer: Partial<Components> = {
     // img: to render images in markdown with relative file paths
     img: ({
       alt,
@@ -51,7 +55,11 @@ const MarkdownPreview: FC<{
         // eslint-disable-next-line @next/next/no-img-element
         <img
           alt={alt}
-          src={isUrlAbsolute(src as string) ? src : `/api/?path=${parentPath}/${src}&raw=true`}
+          src={
+            isUrlAbsolute(src as string)
+              ? src
+              : `/api/?path=${parentPath}/${src}&raw=true`
+          }
           title={title}
           width={width}
           height={height}
@@ -67,7 +75,7 @@ const MarkdownPreview: FC<{
       ...props
     }: {
       className?: string | undefined
-      children: ReactNode
+      children?: ReactNode // Make children optional
       inline?: boolean
     }) {
       if (inline) {
@@ -85,6 +93,7 @@ const MarkdownPreview: FC<{
         </SyntaxHighlighter>
       )
     },
+
   }
 
   if (error) {
@@ -116,11 +125,7 @@ const MarkdownPreview: FC<{
           {/* Using rehypeRaw to render HTML inside Markdown is potentially dangerous, use under safe environments. (#18) */}
           <ReactMarkdown
             // @ts-ignore
-            // remarkPlugins={[remarkGfm, remarkMath]}
-            // temporarily remove remarkGfm becuase of its incompatibility with inline code in markdown
-            // See: https://github.com/remarkjs/remark-gfm/issues/57
-            //      https://github.com/remarkjs/react-markdown/issues/763
-            remarkPlugins={[remarkMath]}
+            remarkPlugins={[remarkGfm, remarkMath]}
             // The type error is introduced by caniuse-lite upgrade.
             // Since type errors occur often in remark toolchain and the use is so common,
             // ignoring it shoudld be safe enough.
