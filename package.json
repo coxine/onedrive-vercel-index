@@ -18,7 +18,6 @@
     "@fortawesome/react-fontawesome": "^0.2.0",
     "@headlessui/react": "^1.7.17",
     "@tailwindcss/line-clamp": "^0.4.4",
-    "@types/react-pdf": "^7.0.0",
     "awesome-debounce-promise": "^2.1.0",
     "axios": "^1.6.4",
     "cors": "^2.8.5",
